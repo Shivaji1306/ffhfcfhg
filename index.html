@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SereniTea — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-6">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-emerald-200 rounded flex items-center justify-center text-emerald-700 font-bold">ST</div>
+          <span class="text-xl font-semibold">SereniTea</span>
+        </a>
+        <nav class="space-x-4">
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="text-sm font-medium text-emerald-600">Home</a>
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="text-sm text-gray-600 hover:text-emerald-600">About</a>
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="text-sm text-gray-600 hover:text-emerald-600">Contact</a>
+          <button id="cartBtn" class="relative inline-flex items-center px-3 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700">
+            Cart
+            <span id="cartCount" class="ml-2 inline-block bg-white text-emerald-700 font-semibold px-2 py-0.5 rounded">0</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl font-extrabold text-gray-900">Find your perfect cup at SereniTea</h1>
+        <p class="mt-4 text-gray-600">Handpicked loose-leaf teas crafted for calm mornings and cozy evenings. Explore single origins and delicious blends.</p>
+        <div class="mt-6 flex space-x-3">
+          <a href="#products" class="px-5 py-3 bg-emerald-600 text-white rounded hover:bg-emerald-700">Shop Teas</a>
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="px-5 py-3 border rounded border-gray-200 hover:bg-gray-100">Our Story</a>
+        </div>
+      </div>
+      <div>
+        <img src="{{unsplash: steaming cup of green tea on a wooden table with tea leaves nearby}}" alt="Steaming cup of green tea" class="w-full rounded-lg shadow-lg" />
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="mt-12">
+      <h2 class="text-2xl font-semibold">Featured Teas</h2>
+      <p class="text-gray-600 mt-2">Small-batch selections, freshly packaged.</p>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+          <img src="{{unsplash: loose leaf green tea with bright green leaves}}" alt="Green Tea" class="h-40 w-full object-cover rounded" />
+          <h3 class="mt-4 font-semibold">Jade Green</h3>
+          <p class="text-sm text-gray-500 mt-1">Light, vegetal, and refreshing.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold">$12.00</span>
+            <button class="addToCartBtn px-3 py-1 bg-emerald-600 text-white rounded" data-name="Jade Green" data-price="12">Add</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+          <img src="{{unsplash: warm black tea in ceramic cup with steam}}" alt="Black Tea" class="h-40 w-full object-cover rounded" />
+          <h3 class="mt-4 font-semibold">Estate Black</h3>
+          <p class="text-sm text-gray-500 mt-1">Bold and malty, perfect with milk.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold">$10.00</span>
+            <button class="addToCartBtn px-3 py-1 bg-emerald-600 text-white rounded" data-name="Estate Black" data-price="10">Add</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+          <img src="{{unsplash: delicate oolong tea leaves on a spoon}}" alt="Oolong Tea" class="h-40 w-full object-cover rounded" />
+          <h3 class="mt-4 font-semibold">Cloud Oolong</h3>
+          <p class="text-sm text-gray-500 mt-1">Floral notes with a smooth finish.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold">$14.00</span>
+            <button class="addToCartBtn px-3 py-1 bg-emerald-600 text-white rounded" data-name="Cloud Oolong" data-price="14">Add</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+          <img src="{{unsplash: bright green matcha powder in a bowl with bamboo whisk}}" alt="Matcha" class="h-40 w-full object-cover rounded" />
+          <h3 class="mt-4 font-semibold">Ceremonial Matcha</h3>
+          <p class="text-sm text-gray-500 mt-1">Vibrant, umami-rich, stoneground.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-bold">$18.00</span>
+            <button class="addToCartBtn px-3 py-1 bg-emerald-600 text-white rounded" data-name="Ceremonial Matcha" data-price="18">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="mt-12 bg-emerald-50 border border-emerald-100 rounded p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div>
+          <h3 class="text-lg font-semibold">Join our tea circle</h3>
+          <p class="text-gray-600 mt-1">Receive new blends and offers — delivered monthly.</p>
+        </div>
+        <form id="newsletterForm" class="mt-4 md:mt-0 flex">
+          <input type="email" id="newsletterEmail" placeholder="Your email" class="px-4 py-2 rounded-l border border-emerald-200 focus:outline-none" required>
+          <button type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-r">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg w-96 mx-4 shadow-lg">
+      <div class="p-4 border-b flex justify-between items-center">
+        <h3 class="font-semibold">Your Cart</h3>
+        <button id="closeCart" class="text-gray-500 hover:text-gray-800">Close</button>
+      </div>
+      <div id="cartItems" class="p-4 max-h-80 overflow-auto">
+        <!-- Items injected here -->
+      </div>
+      <div class="p-4 border-t flex justify-between items-center">
+        <div>
+          <div class="text-gray-600">Total</div>
+          <div id="cartTotal" class="font-bold text-lg">$0.00</div>
+        </div>
+        <div class="space-x-2">
+          <button id="clearCart" class="px-3 py-2 bg-red-500 text-white rounded">Clear</button>
+          <button id="checkoutBtn" class="px-3 py-2 bg-emerald-600 text-white rounded">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-sm text-gray-600">© 2025 SereniTea — Small-batch teas crafted with care</div>
+      <div class="mt-4 md:mt-0 text-sm text-gray-600">Follow us on <span class="text-emerald-600 font-medium">Instagram</span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Simple cart functionality stored in localStorage
+    const addButtons = document.querySelectorAll('.addToCartBtn');
+    const cartBtn = document.getElementById('cartBtn');
+    const cartModal = document.getElementById('cartModal');
+    const closeCart = document.getElementById('closeCart');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartCount = document.getElementById('cartCount');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const clearCartBtn = document.getElementById('clearCart');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    function loadCart() {
+      const raw = localStorage.getItem('serenitea_cart');
+      return raw ? JSON.parse(raw) : [];
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem('serenitea_cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cart = loadCart();
+      const count = cart.reduce((s, i) => s + i.qty, 0);
+      cartCount.textContent = count;
+
+      // render items
+      cartItemsEl.innerHTML = '';
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+        cartTotalEl.textContent = '$0.00';
+        return;
+      }
+
+      let total = 0;
+      cart.forEach((item, idx) => {
+        total += item.price * item.qty;
+        const itemEl = document.createElement('div');
+        itemEl.className = 'flex items-center justify-between py-2 border-b';
+        itemEl.innerHTML = `
+          <div>
+            <div class="font-medium">${item.name}</div>
+            <div class="text-sm text-gray-500">$${item.price.toFixed(2)} &times; ${item.qty}</div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button class="text-red-500 removeBtn" data-idx="${idx}">Remove</button>
+          </div>
+        `;
+        cartItemsEl.appendChild(itemEl);
+      });
+
+      cartTotalEl.textContent = `$${total.toFixed(2)}`;
+
+      // attach remove handlers
+      document.querySelectorAll('.removeBtn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-idx'));
+          const cart = loadCart();
+          cart.splice(idx, 1);
+          saveCart(cart);
+        });
+      });
+    }
+
+    addButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.getAttribute('data-name');
+        const price = parseFloat(btn.getAttribute('data-price'));
+        const cart = loadCart();
+        const existing = cart.find(i => i.name === name);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ name, price, qty: 1 });
+        }
+        saveCart(cart);
+      });
+    });
+
+    cartBtn.addEventListener('click', () => {
+      cartModal.classList.remove('hidden');
+      cartModal.classList.add('flex');
+      updateCartUI();
+    });
+
+    closeCart.addEventListener('click', () => {
+      cartModal.classList.add('hidden');
+      cartModal.classList.remove('flex');
+    });
+
+    clearCartBtn.addEventListener('click', () => {
+      localStorage.removeItem('serenitea_cart');
+      updateCartUI();
+    });
+
+    checkoutBtn.addEventListener('click', () => {
+      alert('Thanks! This demo site does not process payments.');
+      localStorage.removeItem('serenitea_cart');
+      updateCartUI();
+      cartModal.classList.add('hidden');
+      cartModal.classList.remove('flex');
+    });
+
+    // Newsletter
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      if (!email) return;
+      alert('Thanks for subscribing, ' + email + '!');
+      document.getElementById('newsletterEmail').value = '';
+    });
+
+    // initialize UI on page load
+    updateCartUI();
+  </script>
+</body>
+</html>
